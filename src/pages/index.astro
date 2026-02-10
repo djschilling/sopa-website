@@ -1,0 +1,43 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+
+const title = "SOPA - Puzzle Game";
+const description = "Slide tube tiles on a 4x4 board and connect both doors. Play 100 handcrafted levels and race the clock in Just Play mode.";
+---
+
+<BaseLayout title={title} description={description}>
+  <section class="hero">
+    <div class="container hero-grid">
+      <div class="hero-card card">
+        <h1>SOPA</h1>
+        <p class="lead">A quick-thinking puzzle game about moving tube tiles on a 4x4 board to connect two doors.</p>
+        <div class="button-row">
+          <a class="btn btn-primary" href="https://play.google.com/store/apps/details?id=de.sopa" rel="noreferrer" target="_blank">Download for Android</a>
+          <a class="btn btn-secondary" href="/support">Need Help?</a>
+        </div>
+      </div>
+      <article class="card tile">
+        <img src="/images/sopa-logo.png" alt="SOPA game logo" width="220" height="220" loading="eager" />
+        <p class="muted">iOS link can be added here as soon as your App Store listing is live.</p>
+      </article>
+    </div>
+  </section>
+
+  <section>
+    <div class="container">
+      <h2>Game Modes</h2>
+      <div class="grid">
+        <article class="card tile">
+          <img src="/images/level-mode.png" alt="SOPA Level Mode screenshot" width="360" height="640" loading="lazy" />
+          <h3>Level Mode</h3>
+          <p class="muted">Play 100 handcrafted levels, unlock one after another, and earn up to three stars per stage.</p>
+        </article>
+        <article class="card tile">
+          <img src="/images/just-play.png" alt="SOPA Just Play screenshot" width="360" height="640" loading="lazy" />
+          <h3>Just Play</h3>
+          <p class="muted">Beat the timer, chain wins, and chase your high score with rising puzzle difficulty.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+</BaseLayout>

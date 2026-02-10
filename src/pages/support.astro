@@ -1,0 +1,25 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+
+const title = "SOPA Support";
+const description = "Support for SOPA puzzle game.";
+---
+
+<BaseLayout title={title} description={description}>
+  <section class="page">
+    <div class="container">
+      <article class="prose">
+        <h1>Support</h1>
+        <p>If you found a bug or need help with SOPA, contact us:</p>
+        <p><strong>Email:</strong> <a href="mailto:support@sopagame.com">support@sopagame.com</a></p>
+
+        <h2>Before You Write</h2>
+        <ul>
+          <li>Tell us your device model and OS version.</li>
+          <li>Describe exactly what happened and what you expected.</li>
+          <li>If possible, include a screenshot.</li>
+        </ul>
+      </article>
+    </div>
+  </section>
+</BaseLayout>
