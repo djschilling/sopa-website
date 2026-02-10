@@ -16,6 +16,7 @@ const supportHref = withBase("support");
 const privacyHref = withBase("privacy");
 const termsHref = withBase("terms");
 const aboutUsHref = withBase("about-us");
+const faviconHref = withBase("images/sopa-logo.png");
 ---
 
 <!doctype html>
@@ -30,6 +31,8 @@ const aboutUsHref = withBase("about-us");
     <meta property="og:type" content="website" />
     <meta property="og:url" content={Astro.url.href} />
     <meta name="twitter:card" content="summary_large_image" />
+    <link rel="icon" type="image/png" href={faviconHref} />
+    <link rel="apple-touch-icon" href={faviconHref} />
     <link rel="canonical" href={Astro.url.href} />
   </head>
   <body>
