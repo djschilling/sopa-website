@@ -4,6 +4,8 @@ import BaseLayout from "../layouts/BaseLayout.astro";
 const title = "SOPA - Puzzle Game";
 const description = "Slide tube tiles on a 4x4 board and connect both doors. Play 100 handcrafted levels and race the clock in Just Play mode.";
 const baseUrl = import.meta.env.BASE_URL;
+const normalizedBaseUrl = baseUrl.endsWith("/") ? baseUrl : `${baseUrl}/`;
+const withBase = (path: string) => `${normalizedBaseUrl}${path}`;
 ---
 
 <BaseLayout title={title} description={description}>
@@ -24,11 +26,11 @@ const baseUrl = import.meta.env.BASE_URL;
         </div>
         <div class="button-row">
           <a class="btn btn-primary" href="https://play.google.com/store/apps/details?id=de.sopa" rel="noreferrer" target="_blank">Download for Android</a>
-          <a class="btn btn-secondary" href={`${baseUrl}support`}>Need Help?</a>
+          <a class="btn btn-secondary" href={withBase("support")}>Need Help?</a>
         </div>
       </div>
       <article class="card logo-tile">
-        <img src={`${baseUrl}images/sopa-logo.png`} alt="SOPA game logo" width="220" height="220" loading="eager" />
+        <img src={withBase("images/sopa-logo.png")} alt="SOPA game logo" width="220" height="220" loading="eager" />
         <p class="muted">iOS link can be added here as soon as your App Store listing is live.</p>
       </article>
     </div>
@@ -39,12 +41,12 @@ const baseUrl = import.meta.env.BASE_URL;
       <h2>Game Modes</h2>
       <div class="grid">
         <article class="card tile">
-          <img src={`${baseUrl}images/level-mode.png`} alt="SOPA Level Mode screenshot" width="360" height="640" loading="lazy" />
+          <img src={withBase("images/level-mode.png")} alt="SOPA Level Mode screenshot" width="360" height="640" loading="lazy" />
           <h3>Level Mode</h3>
           <p class="muted">Play 100 handcrafted levels, unlock one after another, and earn up to three stars per stage.</p>
         </article>
         <article class="card tile">
-          <img src={`${baseUrl}images/just-play.png`} alt="SOPA Just Play screenshot" width="360" height="640" loading="lazy" />
+          <img src={withBase("images/just-play.png")} alt="SOPA Just Play screenshot" width="360" height="640" loading="lazy" />
           <h3>Just Play</h3>
           <p class="muted">Beat the timer, chain wins, and chase your high score with rising puzzle difficulty.</p>
         </article>
